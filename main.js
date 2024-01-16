@@ -52,15 +52,15 @@ function draw() {
     jugador.collide(suelo, reinicio_salto)
     if (keyWentUp("UP_ARROW") && contador_de_saltos <= 1) {
         contador_de_saltos++
-        jugador.velocityY = -10
+        jugador.velocityY = -12
     }
     if (keyDown("RIGHT_ARROW")) {
-        jugador.x = jugador.x + 55
+        jugador.x = jugador.x + 20
         jugador.mirrorX(1)
         jugador.changeAnimation("creeperCaminando", creeperCaminando)
     }
     if (keyDown("LEFT_ARROW")) {
-        jugador.x = jugador.x - 55
+        jugador.x = jugador.x - 20
         jugador.changeAnimation("creeperCaminando", creeperCaminando)
         jugador.mirrorX(-1)
     }
