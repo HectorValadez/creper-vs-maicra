@@ -55,12 +55,12 @@ function draw() {
         jugador.velocityY = -12
     }
     if (keyDown("RIGHT_ARROW")) {
-        jugador.x = jugador.x + 20
+        jugador.x = jugador.x + 30
         jugador.mirrorX(1)
         jugador.changeAnimation("creeperCaminando", creeperCaminando)
     }
     if (keyDown("LEFT_ARROW")) {
-        jugador.x = jugador.x - 20
+        jugador.x = jugador.x - 30
         jugador.changeAnimation("creeperCaminando", creeperCaminando)
         jugador.mirrorX(-1)
     }
@@ -87,11 +87,12 @@ function draw() {
             cactus.addImage(nopal)
             cactus.scale = 0.3
             cactus.y = 300
+            cactus.setCollider("circle",0,0,200)
             cactus.depth=4
         }
         grupoCactus.add(cactus)
     }
-    if (frameCount % 200 == 0) {
+    if (frameCount % 300 == 0) {
         aguas_con_la_flecha = createSprite(random(ancho, ancho * 2), 200, 20, 20)
         aguas_con_la_flecha.velocityX = random(-8, -15)
         aguas_con_la_flecha.addAnimation("flecha", flecha)
